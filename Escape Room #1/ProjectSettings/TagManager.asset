@@ -7,6 +7,9 @@ TagManager:
   - schroevendraaier
   - Aansteker
   - Fakkel
+  - ZwaartBlauw
+  - ZwaartGroen
+  - ZwaartRood
   layers:
   - Default
   - TransparentFX
