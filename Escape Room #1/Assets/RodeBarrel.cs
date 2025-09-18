@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class RodeBarrel : MonoBehaviour
 {
-    private int Zwaarden = 0;
+    public int Zwaarden = 0;
+    public bool RoodKlaar;
     public GameObject Light;
     void Start()
     {
@@ -13,8 +14,9 @@ public class RodeBarrel : MonoBehaviour
     void Update()
     {
         if (Zwaarden == 2)
-        { 
+        {
             Light.SetActive(true);
+            RoodKlaar = true;
         }  
     }
 
@@ -22,14 +24,16 @@ public class RodeBarrel : MonoBehaviour
     {
         if (other.CompareTag("ZwaartRood"))
         {
-            Zwaarden = +1;
+            Debug.Log("+1 zwaart");
+            Zwaarden +=1;
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("ZwaartRood"))
         {
-            Zwaarden = -1;
+            Debug.Log("-1 zwaart");
+            Zwaarden -=1;
         }
     }
 }

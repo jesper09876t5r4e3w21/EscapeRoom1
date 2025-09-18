@@ -7,7 +7,7 @@ public class VentilatieRooster : MonoBehaviour
     public Schroef1 schroef1Script;
     public Schroef2 schroef2Script;
     public Schroef3 schroef3Script;
-    public Schroef4 schroef4Script;
+    public Schroef5 schroef5Script;
 
     public bool VentTaskFinished = false;
 
@@ -43,7 +43,7 @@ public class VentilatieRooster : MonoBehaviour
         if (schroef1Script != null && schroef1Script.isLosgedraaid &&
             schroef2Script != null && schroef2Script.isLosgedraaid &&
             schroef3Script != null && schroef3Script.isLosgedraaid &&
-            schroef4Script != null && schroef4Script.isLosgedraaid)
+            schroef5Script != null && schroef5Script.isLosgedraaid)
         {
             VentTaskFinished = true;
             Debug.Log("Alle schroeven zijn losgedraaid!");

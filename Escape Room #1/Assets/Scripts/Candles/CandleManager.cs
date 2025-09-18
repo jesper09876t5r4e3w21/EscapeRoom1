@@ -9,10 +9,12 @@ public class CandleManager : MonoBehaviour
     public Candle5 Candle5Script;
 
     public bool CandleTaskFinished = false;
+    public GameObject Hamer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Hamer.SetActive(false);
         // Optioneel: Je kunt hier initialisatiecode toevoegen als dat nodig is.
     }
 
@@ -35,6 +37,7 @@ public class CandleManager : MonoBehaviour
             // Als alle voorwaarden voldaan zijn, zet de taak op voltooid.
             CandleTaskFinished = true;
             Debug.Log("Alle kaarsen zijn aangestoken! Taak voltooid.");
+            Hamer.SetActive(true);
         }
         
     }
